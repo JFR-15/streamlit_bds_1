@@ -80,7 +80,7 @@ if st.session_state.pinned:
     st.subheader("Pinned views")
     st.dataframe(pd.DataFrame(st.session_state.pinned), hide_index=True)
 st.download_button(
-"Download filtered data",
+"Download filtered data (CSV)",
     data=view.to_csv(index=False).encode("utf-8"),
     file_name="watchlist.csv",
     mime="text/csv",
